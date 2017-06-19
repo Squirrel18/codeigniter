@@ -1,4 +1,4 @@
-            <em>&copy; 2017</em>
+            <p class="text-center">&copy; 2017</p>
         </div>
     </body>
 </html>

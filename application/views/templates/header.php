@@ -8,5 +8,5 @@
     </head>
     <body>
         <div class="container">
-            <h1><?php echo $title; ?></h1>
+            <h1 class="text-center"><?php echo $title; ?></h1>
         
