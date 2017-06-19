@@ -66,5 +66,21 @@ class News extends CI_Controller {
         $this->load->view('news/edit', $data);
         $this->load->view('templates/footer');
     }
+
+    public function edit_ajax() {
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+
+        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('text', 'Text', 'required');
+        $this->form_validation->set_rules('update', 'Update', 'required');
+
+        if ($this->form_validation->run() === FALSE) {
+            echo "no data";
+        } else {
+            echo $this->news_model->update();
+        }
+    }
+
 }
 ?>
